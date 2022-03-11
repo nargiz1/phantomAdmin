@@ -1,0 +1,5 @@
+﻿@model List<SocialNetwork>
+@foreach (SocialNetwork item in Model)
+{
+    <li><a href="@item.Url" class="icon brands style2 @item.Icon"><span class="label">@item.Name</span></a></li>
+}

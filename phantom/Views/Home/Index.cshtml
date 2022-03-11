@@ -8,16 +8,16 @@
             <p>@Model.Banner.Text</p>
         </header>
         <section class="tiles">
-            @for (int i = 0; i < Model.Projects.Count; i++)
+            @foreach(Project item in Model.Projects)
             {
-                <article runat="server" class="style@(ViewBag.Style<6?(ViewBag.Style+=1):((ViewBag.Style-=1)))">
+                <article runat="server" class="style@(ViewBag.Style<6?(ViewBag.Style+=1):((ViewBag.Style-=5)))">
                     <span class="image">
-                        <img src="@Model.Projects[i].Image" alt="" />
+                        <img src="~/assets/img/Projects/@item.Image" alt="" />
                     </span>
-                    <a href="/projects/index/@Model.Projects[i].Id">
-                        <h2>@Model.Projects[i].Title</h2>
+                    <a href="/projects/index/@item.Id">
+                        <h2>@item.Title</h2>
                         <div class="content">
-                            <p>@Model.Projects[i].SubTitle</p>
+                            <p>@item.SubTitle</p>
                         </div>
                     </a>
                 </article>

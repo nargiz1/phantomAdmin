@@ -1,0 +1,12 @@
+﻿@model Message
+<div class="row">
+    <div class="col-md-8">
+        <h4>Title: <b>@Model.UserName</b></h4>
+        <h4>Subtitle: <b>@Model.UserEmail</b></h4>
+        <div class="mb-5">
+            @Model.Text
+        </div>
+        <span>@Model.MessageDate</span>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>
