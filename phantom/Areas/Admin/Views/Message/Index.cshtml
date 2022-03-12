@@ -35,6 +35,10 @@
                                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary mr-1">
                                     <i class="fas fa-eye"></i>
                                 </a>
+                                
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mr-1">
+                                    <i class="fas fa-trash"></i>
+                                </a>
                             </td>
                         </tr>
                     }
